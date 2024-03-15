@@ -1,0 +1,145 @@
+.htmlBlock {
+  &:not(:global(.bulletin)) {
+    h3 {
+      @apply text-3xl font-medium;
+    }
+
+    h4 {
+      @apply font-bold;
+    }
+
+    h5 {
+      @apply text-2xl font-semibold;
+    }
+
+    p:not(:last-child),
+    h3:not(:last-child),
+    h4:not(:last-child),
+    h5:not(:last-child),
+    li:not(:last-child),
+    ul:not(:last-child),
+    ol:not(:last-child),
+    hr,
+    .wp-block-embed__wrapper {
+      @apply mb-4;
+    }
+
+    &:global(.leading-normal) li:not(:last-child) {
+      @apply mb-10;
+    }
+
+    &:global([class*="circle-checked"]) ul {
+      >li {
+        @apply relative pl-12 mb-6;
+
+        &::marker {
+          content: "";
+        }
+
+        &:before {
+          @apply absolute top-0 left-0;
+          content: "";
+          width: 30px;
+          height: 30px;
+          background-image: url(/images/circle-checked-orange.svg);
+        }
+
+        p {
+          @apply mt-4;
+        }
+      }
+    }
+
+    &:global(.circle-checked-blue) ul>li:before {
+      background-image: url(/images/circle-checked-blue.svg);
+    }
+
+    ol {
+      @apply ml-4 text-left list-decimal list-outside;
+    }
+
+    ul ul,
+    ol ul {
+      @apply mt-4;
+    }
+
+    ul ol,
+    ol ol {
+      @apply mt-4 ml-8;
+      list-style-type: lower-latin;
+    }
+
+    img,
+    video,
+    audio,
+    object,
+    iframe {
+      @apply max-w-full;
+    }
+
+    img {
+      @apply inline-block;
+    }
+
+    a {
+      @apply underline underline-offset-4;
+    }
+
+    u {
+      @apply underline-offset-4;
+    }
+
+    b,
+    strong {
+      @apply font-medium;
+    }
+
+    td {
+      @apply px-4 pb-4 align-top;
+
+      @media (max-width: 1279px) {
+        @apply block;
+      }
+
+      figure {
+        @media (max-width: 1440px) and (min-width: 1280px) {
+          width: 170px !important;
+        }
+      }
+
+      img {
+        height: inherit;
+      }
+    }
+
+    img:global(.aligncenter) {
+      @apply block mx-auto my-8;
+    }
+
+    &:global(.text-center) table {
+      @apply mx-auto border-separate;
+      border-spacing: 40px;
+
+      td {
+        @apply px-0 pb-0 align-middle;
+
+        @media (max-width: 1279px) {
+          @apply table-cell;
+        }
+
+        /* @media (max-width: 767px) {
+            @apply block;
+          } */
+      }
+
+      @media (max-width: 767px) {
+        border-spacing: 0;
+
+        td {
+          @apply mb-5;
+        }
+      }
+    }
+
+  }
+}
