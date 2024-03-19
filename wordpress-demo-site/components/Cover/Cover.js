@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./cover.module.scss";
 export const Cover = (props) => {
   const { heading, image, sub_heading, side_image, title, button, buttonone } =
     props;
@@ -12,7 +13,7 @@ export const Cover = (props) => {
     });
   }
   return (
-    <div className="bg-styling">
+    <div className={`${styles.bg_styling}`}>
       <div className="mx-auto max-w-default px-4 lg:px-20 xl:px-108 ">
         <div className="flex flex-col items-center gap-6 py-14 lg:flex-row lg:py-20">
           <div className="w-full lg:w-2/4">
@@ -53,7 +54,7 @@ export const Cover = (props) => {
               return (
                 <div key={i} className="w-auto h-[60] min-w-10">
                   {" "}
-                  <Image src={node?.images} width={100} height={53} />
+                  <Image src={node?.images} width={70} height={53} />
                 </div>
               );
             })}

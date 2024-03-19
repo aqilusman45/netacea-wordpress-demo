@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./NavBar.module.scss";
 export const NavBar = ({ testimonials, blog, image }) => {
-  console.log(image);
+  console.log(image, testimonials, blog);
   return (
     <div className="w-full fixed top-0 left-0 z-20 border-b-[1px] border-[#0154A4] lg:border-b-[0px] bg-[#010D2E]">
       <div className="relative mx-auto flex w-full max-w-default items-center justify-between px-4 py-4 lg:px-16 lg:py-0 xl:px-108">

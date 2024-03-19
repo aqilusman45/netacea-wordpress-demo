@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import client from "client";
 import { BlockRenderer } from "components/BlockRenderer";
+import { NavBar } from "components/NavBar";
 import { cleanAndTransformBlocks } from "utils/cleanAndTransformBlocks";
 export default function Home(props) {
   return (

@@ -1,0 +1,105 @@
+.blog_post_rich_text {
+    >p {
+        @media (min-width: 1024px) {
+            font-size: 20px;
+            line-height: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        font-family: 'Inter',
+        sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+    }
+
+    >a {
+        @media (min-width: 1024px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        font-family: 'Inter',
+        sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3863f8;
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style: disc;
+
+        li {
+            @media (min-width: 1024px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            font-family: 'Inter',
+            sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #575a66;
+        }
+    }
+
+    ol {
+        padding-left: 20px;
+        list-style: disc;
+
+        li {
+            @media (min-width: 1024px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            font-family: 'Inter',
+            sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #575a66;
+        }
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 38px;
+    }
+
+    img {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
+
+.blog_post_main_container {
+    &::after {
+        @media (min-width: 550px) {
+            height: 536px;
+        }
+
+        height: 336px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: #010d2e;
+    }
+}
+
+.background {
+    background: linear-gradient(180deg, #011831 0%, #113161 100%);
+}

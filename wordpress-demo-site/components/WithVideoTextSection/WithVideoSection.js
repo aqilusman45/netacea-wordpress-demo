@@ -1,11 +1,10 @@
-import classNames from "classnames";
+import ModalComponent from "components/ModalComponent/ModalComponent";
 import styles from "./video-with-text-section.module.scss";
-import ModalComponent from "components/ModalComponent";
+import { ReactComponent as CancelModalIcon } from "icons/cancel-modal.svg";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 export const WithVideoSection = (props) => {
-  const { text, videoUrl, video, videoTitle } = props;
-
+  const { text, video, video_url } = props;
   const [show, setShow] = useState(false);
 
   const handleCancel = () => {
@@ -58,38 +57,35 @@ export const WithVideoSection = (props) => {
           </div>
         </div>
       </div>
-      <ModalComponent
+      {/* <ModalComponent
         otherClasses=""
-        show={show}
         additionalClass="px-4 lg:px-0 max-w-800 w-full"
         handleClose={handleCancel}
       >
         <div className="mx-auto flex  flex-col items-center justify-center gap-6 text-white">
           <div className="flex w-full justify-between text-white">
-            <h4 type="h4" otherClasses={"text-white w-[95%]"}>
-              {videoTitle}
-            </h4>
+            <h4 otherClasses="text-white w-[95%] text-[20px]">title</h4>
             <button
               onClick={() => setShow(false)}
               className="mt-2 flex w-[5%] items-start
              justify-end"
             >
-              {/* <CancelModalIcon className="h-[18px] w-[18px]" /> */}
+              <CancelModalIcon className="h-[18px] w-[18px]" />
             </button>
           </div>
-          <div className={`${styles.player_wrapper} h-full w-full`}>
-            {/* <ReactPlayer
-              url={videoUrl}
+          <div className="player-wrapper h-full w-full">
+            <ReactPlayer
+              url={video_url}
               controls
               width="100%"
               playing={show}
               playsinline
               height={377}
-              className={`${styles.video_with_text_react_player} aspect-video !h-auto !w-full [&>div>iframe]:aspect-video [&>div>iframe]:w-full`}
-            /> */}
+              className="video-with-text-react-player aspect-video !h-auto !w-full [&>div>iframe]:aspect-video [&>div>iframe]:w-full"
+            />
           </div>
         </div>
-      </ModalComponent>
+      </ModalComponent> */}
     </div>
   );
 };

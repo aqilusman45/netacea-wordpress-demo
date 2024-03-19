@@ -28,7 +28,9 @@ export const BlogSection = (props) => {
           <h3 className="text-[32px] text-white">{heading}</h3>
           {/* <Button {...button} mode={variant} otherClasses="hidden md:flex" /> */}
         </div>
-        <div className="grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div
+          className={`  grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3`}
+        >
           {data?.map((node, i) => {
             return <BlogSectionCard key={i} {...node} />;
           })}

@@ -21,3 +21,23 @@
         z-index: 10;
     }
 }
+
+.featured_cards_container {
+    position: relative;
+
+    &::after {
+        @media (min-width: 1024px) {
+            display: none;
+        }
+
+        content: '';
+        position: absolute;
+        height: 168px;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        background: linear-gradient(180deg,
+            rgba(245, 245, 245, 0) 0%,
+            #ffffff 52.5%);
+    }
+}
