@@ -9,8 +9,8 @@ export const BlogSectionCard = ({ image, text, title, date, button, sub }) => {
       >
         <Image
           src={image}
-          width={392}
-          height={282}
+          width={500}
+          height={500}
           otherClasses="w-full rounded-t min-h-282 h-282"
         />
         <div

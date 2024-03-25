@@ -5,7 +5,7 @@ export const FeaturedCard = ({ image, title, button, description }) => {
   return (
     <div>
       <div
-        className={`${styles.featured_card_container} group flex h-full min-h-[330px] flex-col justify-between gap-14 rounded-[3px] p-6 transition-all duration-400`}
+        className={`${styles.featured_card_container} group flex h-full min-h-[330px] flex-col justify-between gap-14 shadow rounded-[3px] p-6 transition-all duration-400`}
       >
         <div>
           <div className="w-fit rounded border-[1px] border-blue-300 p-4 text-blue-300 backdrop-blur transition-all duration-400 group-hover:bg-blue-300 group-hover:text-white">
