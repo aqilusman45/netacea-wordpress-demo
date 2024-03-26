@@ -25,16 +25,16 @@ export const Cover = (props) => {
             {/* <button onClick={button?.url}>{button?.title}</button> */}
             <div className="flex gap-4">
               <Link
-                href={button?.url}
+                href={button}
                 className="bg-[#ABF57A] px-4 rounded text-[#001831] py-3"
               >
-                {button?.title}
+                Try Netacea
               </Link>
               <Link
                 className="bg-transparent px-4 text-[#ABF57A] py-3 rounded border-[#ABF57A] border"
-                href={buttonone?.url}
+                href={buttonone}
               >
-                {buttonone?.title}
+                Our Product
               </Link>
             </div>
           </div>

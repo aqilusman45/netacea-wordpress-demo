@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./BlogSection.module.scss";
 export const BlogSection = (props) => {
   const { heading, card } = props;
+  console.log(heading, card, "blogsection");
   const data = [];
   for (let i = 0; i < card; i++) {
     const imageKey = `card_${i}_image`;

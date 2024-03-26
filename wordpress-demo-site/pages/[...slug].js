@@ -1,10 +1,15 @@
 import { gql } from "@apollo/client";
 import client from "client";
 import { cleanAndTransformBlocks } from "utils/cleanAndTransformBlocks";
+import { BlockRenderer } from "components/BlockRenderer";
 
 export default function page(props) {
   console.log(props, "pages props");
-  return <div></div>;
+  return (
+    <div>
+      <BlockRenderer blocks={props?.blocks} />
+    </div>
+  );
 }
 
 export const getStaticProps = async (context) => {

@@ -6,6 +6,7 @@ import { BlogSection } from "components/BlogSection";
 import { NavBar } from "components/NavBar";
 import { Footer } from "components/Footer";
 import { FeaturedSection } from "components/FeaturedSection";
+import { Testimonials } from "components/Testimonials";
 
 export const BlockRenderer = ({ blocks }) => {
   return blocks.map((block) => {
@@ -25,6 +26,8 @@ export const BlockRenderer = ({ blocks }) => {
         );
       case "acf/featuredsection":
         return <FeaturedSection key={block?.id} {...block?.attributes?.data} />;
+      case "acf/testimonials":
+        return <Testimonials key={block?.id} {...block?.attributes?.data} />;
       case "acf/blogsection":
         return <BlogSection key={block.id} {...block?.attributes?.data} />;
       case "acf/footer":

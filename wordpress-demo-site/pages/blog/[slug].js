@@ -5,6 +5,7 @@ import { Footer } from "components/Footer";
 import { NavBar } from "components/NavBar";
 import navbarMocks from "components/NavBar/mocks";
 import React from "react";
+import footermocks from "components/Footer/mocks";
 
 export default function Blog({ data }) {
   console.log(data, "dataa");
@@ -12,6 +13,7 @@ export default function Blog({ data }) {
     <div>
       <NavBar {...navbarMocks} />
       <BlogPost {...data?.blogs?.edges[0]?.node} />
+      <Footer {...footermocks} />
     </div>
   );
 }

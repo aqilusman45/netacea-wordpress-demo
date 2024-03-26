@@ -41,8 +41,8 @@ export const BlogSectionCard = ({ image, text, title, date, button, sub }) => {
               <p className="text-base mt-6 text-[#001831]">{sub}</p>
             </div>
             {/* <Button label="Read Now" variant="text-link-arrow" mode="light" /> */}
-            <Link className="text-[#216ef2]" href={button?.url}>
-              {button?.title}
+            <Link className="text-[#216ef2]" href={`blog/${button}`}>
+              Read
             </Link>
           </div>
         </div>

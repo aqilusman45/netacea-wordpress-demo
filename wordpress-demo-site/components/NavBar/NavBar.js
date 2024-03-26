@@ -16,12 +16,12 @@ export const NavBar = ({ testimonials, blog, image }) => {
           >
             <ul className="flex flex-col items-center gap-6 lg:flex-row lg:gap-3 xl:gap-6 h-20">
               <li>
-                <Link className="text-white text-base" href="#">
+                <Link className="text-white text-base" href={`${testimonials}`}>
                   testimonials
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-base" href="#">
+                <Link className="text-white text-base" href={`${blog}`}>
                   blog
                 </Link>
               </li>

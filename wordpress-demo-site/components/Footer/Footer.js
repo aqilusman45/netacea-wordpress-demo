@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 export const Footer = ({ image }) => {
   console.log(image, "footer");
+
   return (
     <div className="max-w-[1512px] bg-[#001831] mx-auto pt-[44px] pb-[44px] pl-[21px] pr-[21px] xl:pl-[156px] xl:pr-[140px] xl:pt-[59px] xl:pb-[86px] ">
       <div className="grid  grid-cols-2 lg:grid-cols-5 gap-y-[49px] gap-x-[75px] md:gap-x-[50px]  md:gap-y-[50px] lg:gap-x-[68px] lg:gap-y-[68px] mb-[33px]">
